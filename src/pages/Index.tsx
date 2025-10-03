@@ -59,6 +59,7 @@ const Index = () => {
             <a href="#schedule" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Расписание</a>
             <a href="#pricing" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Абонементы</a>
             <a href="#about" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">О студии</a>
+            <a href="#gallery" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Галерея</a>
             <a href="#instructors" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Преподаватели</a>
             <a href="#news" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Новости</a>
             <a href="#contacts" className="text-sm font-medium text-purple-900 hover:text-purple-600 transition-colors">Контакты</a>
@@ -264,8 +265,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4 bg-white/50 backdrop-blur-sm">
-        <div className="container mx-auto max-w-4xl">
+      <section id="about" className="py-20 px-4 bg-white/50 backdrop-blur-sm relative overflow-hidden">
+        <div className="absolute top-10 left-10 opacity-5 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-80 h-80 object-contain transform -rotate-12" />
+        </div>
+        <div className="absolute bottom-10 right-10 opacity-5 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-80 h-80 object-contain transform rotate-12 scale-x-[-1]" />
+        </div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12 animate-fade-in">
             <Icon name="Sparkles" size={48} className="mx-auto mb-4 text-purple-600" />
             <h2 className="text-5xl font-bold text-purple-900 mb-4">О студии</h2>
@@ -284,8 +291,79 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="instructors" className="py-20 px-4">
-        <div className="container mx-auto">
+      <section id="gallery" className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute top-20 left-10 opacity-10 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-64 h-64 object-contain transform -rotate-12" />
+        </div>
+        <div className="absolute bottom-20 right-10 opacity-10 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-64 h-64 object-contain transform rotate-12 scale-x-[-1]" />
+        </div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12 animate-fade-in">
+            <Icon name="Images" size={48} className="mx-auto mb-4 text-purple-600" />
+            <h2 className="text-5xl font-bold text-purple-900 mb-4">Фотогалерея</h2>
+            <p className="text-lg text-purple-700">Атмосфера нашей студии</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="/img/fdbd186c-8b70-4f5b-803e-8e79f82b06e2.jpg" alt="Балетная студия" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Балетный зал</h3>
+                <p className="text-sm text-purple-600">Профессиональное оборудование</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="/img/0b9073b1-8dc2-4e0e-9a6f-f0d9b5e209b7.jpg" alt="Занятие в студии" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Занятия у станка</h3>
+                <p className="text-sm text-purple-600">Отработка техники</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="/img/644ed172-8a18-4e52-b8b4-d98b49fe7866.jpg" alt="Выступление" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Выступления</h3>
+                <p className="text-sm text-purple-600">Отчётные концерты</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="/img/c7b9a8e1-27c4-4254-b7d4-af49464a2a3f.jpg" alt="Детские занятия" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Детские группы</h3>
+                <p className="text-sm text-purple-600">Обучение с любовью</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="/img/b2dd2fdd-bc46-4381-af38-ddfc026eaac9.jpg" alt="Пуанты" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Классический балет</h3>
+                <p className="text-sm text-purple-600">Работа на пуантах</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-purple-100">
+              <img src="https://cdn.poehali.dev/files/61ad2929-98c4-4637-90f2-63dd2fd4d7f8.jpg" alt="Логотип" className="w-full h-64 object-cover" />
+              <CardContent className="p-4">
+                <h3 className="font-bold text-purple-900">Наша студия</h3>
+                <p className="text-sm text-purple-600">Балетная мастерская</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="instructors" className="py-20 px-4 bg-white/50 backdrop-blur-sm relative overflow-hidden">
+        <div className="absolute top-10 right-20 opacity-5 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-96 h-96 object-contain" />
+        </div>
+        
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 animate-fade-in">
             <Icon name="Users" size={48} className="mx-auto mb-4 text-purple-600" />
             <h2 className="text-5xl font-bold text-purple-900 mb-4">Наши преподаватели</h2>
@@ -309,8 +387,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="news" className="py-20 px-4 bg-white/50 backdrop-blur-sm">
-        <div className="container mx-auto">
+      <section id="news" className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute top-32 left-5 opacity-5 pointer-events-none">
+          <img src="/img/6e2925c3-d1da-4e19-b439-e1f9c380c8fb.jpg" alt="" className="w-72 h-72 object-contain transform rotate-45" />
+        </div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-12 animate-fade-in">
             <Icon name="Bell" size={48} className="mx-auto mb-4 text-purple-600" />
             <h2 className="text-5xl font-bold text-purple-900 mb-4">Новости и объявления</h2>
